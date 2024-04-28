@@ -1,0 +1,21 @@
+<p>weather-forecast works!</p>
+
+
+<div class="weather-forecast">
+  <h2 class="text-2xl text-white mb-4">Prévisions météorologiques pour les prochains jours</h2>
+  <!-- Ajoutez ici le contenu de la prévision météorologique pour les prochains jours -->
+
+  <div *ngFor="let forecast of weatherForecast" class="forecast-item">
+    <div class="forecast-info">
+      <div class="forecast-weather">{{ forecast.weather }}</div>
+      <div class="forecast-date">{{ forecast.date }}</div>
+      <div class="forecast-time">{{ forecast.time }}</div>
+      <!-- Ajoutez d'autres informations météorologiques nécessaires -->
+    </div>
+    <div class="forecast-image">
+      <img [src]="getWeatherIcon(forecast.weather)" alt="Weather Icon">
+      <div class="forecast-temperature">{{ forecast.temperature }} °C</div>
+      <!-- Ajoutez d'autres informations sur la température ou l'image météorologique si nécessaire -->
+    </div>
+  </div>
+</div>

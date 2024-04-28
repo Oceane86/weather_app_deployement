@@ -1,0 +1,29 @@
+<!-- pages/history/history.component.html -->
+<div>
+  <app-navbar></app-navbar>
+  <a (click)="goToHomePage()" class="back-to-home flex items-center gap-2 p-2 bg-gray-300 bg-opacity-10 rounded-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="6 4 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10.5303 16.5303a.75.75 0 0 1 0-1.0607l4.25-4.25a.75.75 0 0 0-1.0607-1.0607L9.4697 14.1893a.75.75 0 0 0 0 1.0607l4.25 4.25a.75.75 0 0 0 1.0607-1.0607l-4.25-4.25z"></path>
+    </svg>
+    <span class="text-white p-3">Retour à la page d'accueil</span>
+  </a>
+
+
+
+  <div class="session-list">
+    <div *ngFor="let session of sessions" class="session-item">
+      <div class="session-info">
+        <div class="session-weather">{{ session.weather }}</div>
+        <div class="session-date">{{ session.date }}</div>
+        <div class="session-time">{{ session.time }}</div>
+        <div class="session-location">{{ session.name }}</div>
+      </div>
+      <div class="session-image">
+        <img [src]="getWeatherIcon(session.weather)" alt="Weather Icon">
+        <div class="session-temperature">{{ session.temperature }} °C</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

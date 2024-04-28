@@ -1,0 +1,36 @@
+/* styles.css */
+
+
+.session-list {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.session-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.session-info {
+  flex-grow: 1;
+}
+
+
+
+a {
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+}
+
+a:hover {
+  text-decoration: underline; 
+}
+
+
+.session-weather {
+  text-transform: capitalize;
+}

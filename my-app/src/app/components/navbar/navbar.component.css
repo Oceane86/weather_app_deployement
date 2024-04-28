@@ -1,0 +1,41 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.menu-content {
+  display: none;
+  position: relative; /* Modifier la position en relative */
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+.show {
+  display: block;
+  position: absolute; /* Modifier la position en absolue */
+  top: 6rem; /* Ajouter une marge par rapport au bouton */
+  right: 0;
+}
+
+
+
+
+.navbar a {
+  cursor: pointer; /* Définir le curseur sur pointer */
+  color: white; /* Définir la couleur du texte en blanc */
+  padding: 10px; /* Ajouter du padding autour des liens */
+}
+
+.navbar a:hover {
+  text-decoration: underline; /* Ajouter une soulignement au survol */
+}

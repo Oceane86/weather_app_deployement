@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'animate.css';
+
+
+body {
+  font-family: "Urbanist", sans-serif;
+  background-color: black;
+  color: white;
+
+}

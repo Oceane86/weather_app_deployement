@@ -1,0 +1,26 @@
+<nav class="navbar border-b border-white">
+  <div class="navbar-info">
+    <p class="text-lg text-white px-3 py-2">{{ currentDate | date }}</p>
+    <div *ngIf="latestSession">
+      <span class="text-lg text-white px-3 py-2">{{ latestSession.name }}</span>
+    </div>
+    <div *ngIf="locationData">
+      <span class="text-lg text-white">{{ locationData.latitude }}, {{ locationData.longitude }}</span>
+    </div>
+  </div>
+  <button class="menu-btn" (click)="toggleMenu()">
+    <img class="w-10 h-10 rounded-full mr-2" [src]="profile?.picture" alt="Photo de profil">
+  </button>
+  <div class="menu-content" [ngClass]="{'show': isMenuOpen}">
+    <ng-container *ngIf="profile; else notLoggedIn">
+      <a routerLink="/historique" class="text-white block py-2 px-4" (click)="goToHistory()">Historique</a>
+      <a class="text-white block py-2 px-4 logout-link" (click)="logout()">Déconnexion</a>
+
+    </ng-container>
+    <ng-template #notLoggedIn>
+      <button class="text-white block py-2 px-4" (click)="logout()">Retour</button>
+    </ng-template>
+  </div>
+</nav>
+
+

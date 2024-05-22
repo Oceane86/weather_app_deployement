@@ -3,6 +3,7 @@ import { HomePageComponent } from './pages/general/home-page/home-page.component
 import { GoogleLogInComponent } from './components/google-log-in/google-log-in.component';
 import { HistoriqueComponent } from './pages/historique/historique.component';
 import { WeatherDetailsComponent } from './pages/weather-details/weather-details.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -10,6 +11,8 @@ export const routes: Routes = [
     {path: 'home', component: HomePageComponent},
     {path: 'historique', component: HistoriqueComponent},
     {path: 'details', component: WeatherDetailsComponent },
+    { path: '**', component: PageNotFoundComponent }
+
 
 ];
 
